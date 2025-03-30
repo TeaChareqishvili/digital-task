@@ -10,6 +10,26 @@ body .App {
   height: 100vh;
 }
 
+/* fonts */
+
+@font-face {
+  font-family: "Roboto-400";
+  src: url("./fonts/Roboto_Condensed-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto-500";
+  src: url("./fonts/Roboto_Condensed-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Roboto-700";
+  src: url("./fonts/Roboto_Condensed-Bold.ttf");
+  font-weight: 700;
+}
+
 /* logo container styles */
 
 .header {
@@ -36,6 +56,7 @@ body .App {
   margin: 0 23px;
   cursor: pointer;
   font-size: 1rem;
+  font-family: "Roboto-500";
   color: #000000;
   transition: color ease 500ms;
 }
@@ -80,6 +101,7 @@ body .App {
   padding: 16px 0;
   color: #eb0028;
   font-size: 0.813rem;
+  font-family: "Roboto-700";
   line-height: 13px;
 }
 
@@ -88,6 +110,7 @@ body .App {
   color: #000000;
   line-height: 30px;
   margin-bottom: 1rem;
+  font-family: "Roboto-700";
 }
 .post-info {
   display: flex;
@@ -106,22 +129,26 @@ body .App {
   font-size: 0.75rem;
   color: #000000;
   line-height: 0.75rem;
+  font-family: "Roboto-500";
 }
 .date {
   color: #9b9b9b;
   font-size: 0.75rem;
   line-height: 0.75rem;
+  font-family: "Roboto-400";
 }
 .views {
   color: #9b9b9b;
   font-size: 0.75rem;
   line-height: 0.75rem;
+  font-family: "Roboto-400";
 }
 
 .post-text {
   color: #929292;
   font-size: 0.875rem;
   line-height: 1.25rem;
+  font-family: "Roboto-400";
 }
 
 /* modal styles */

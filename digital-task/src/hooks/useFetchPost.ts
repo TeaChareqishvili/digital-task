@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-type Post = {
+export type Post = {
   id: number;
   autor: string;
   date: string;

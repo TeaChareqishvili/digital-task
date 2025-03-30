@@ -1,14 +1,25 @@
-import React from "react";
-import useFetchPost from "../../hooks/useFetchPost";
+import React, { useState } from "react";
+import useFetchPost, { Post } from "../../hooks/useFetchPost";
+import Modal from "../modal/Modal";
 export default function PostWrapper() {
   const { data } = useFetchPost();
 
-  console.log(data, "data");
+  const [selectedPost, setSelectedPost] = useState<Post | null>(null);
+
+  const openModal = (post: Post) => {
+    console.log(post);
+    setSelectedPost(post);
+  };
+
+  const closeModal = () => {
+    setSelectedPost(null);
+  };
+
   return (
     <div className="post-container">
       <div className="post-card-wrapper">
         {data?.map((item) => (
-          <div key={item.id} className="card">
+          <div key={item.id} className="card" onClick={() => openModal(item)}>
             <img
               src={item.img}
               srcSet={`${item.img} 1x, ${item.img_2x} 2x`}
@@ -27,6 +38,12 @@ export default function PostWrapper() {
           </div>
         ))}
       </div>
+      {selectedPost && (
+        <Modal isOpen={!!selectedPost} onClose={closeModal}>
+          <h1>{selectedPost.title}</h1>
+          <p>{selectedPost.text}</p>
+        </Modal>
+      )}
     </div>
   );
 }

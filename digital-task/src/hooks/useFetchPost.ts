@@ -1,8 +1,20 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+type Post = {
+  id: number;
+  autor: string;
+  date: string;
+  img: string;
+  img_2x: string;
+  tags: string;
+  text: string;
+  title: string;
+  views: string;
+};
+
 const useFetchPost = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<Post[] | null>(null);
 
   const [error, setError] = useState<unknown>(null);
 
@@ -12,14 +24,12 @@ const useFetchPost = () => {
         const response = await axios.get(
           "https://cloud.codesupply.co/endpoint/react/data.json"
         );
-        console.log(response.data);
         setData(response.data);
       } catch (error) {
-        console.error("Axios error:", error);
         setError("Failed to fetch data");
       }
     };
-    console.log("useEffect is running");
+
     fetchData();
   }, []);
 

@@ -50,7 +50,76 @@ body .App {
 /* post page styles */
 
 .post-container {
-  width: 61%;
-  padding: 48px, 0;
+  width: 80%;
+  padding: 3rem 0 10rem 0;
   margin: auto;
+}
+.post-card-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 360px;
+  cursor: pointer;
+  transition: all ease-in 500ms;
+  padding: 5px;
+}
+.card:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-tag {
+  padding: 16px 0;
+  color: #eb0028;
+  font-size: 0.813rem;
+  line-height: 13px;
+}
+
+.post-title {
+  font-size: 1.5rem;
+  color: #000000;
+  line-height: 30px;
+  margin-bottom: 1rem;
+}
+.post-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.dot {
+  width: 3px;
+  height: 3px;
+  background-color: #d7d7d7;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.post-author {
+  font-size: 0.75rem;
+  color: #000000;
+  line-height: 0.75rem;
+}
+.date {
+  color: #9b9b9b;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+}
+.views {
+  color: #9b9b9b;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+}
+
+.post-text {
+  color: #929292;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }

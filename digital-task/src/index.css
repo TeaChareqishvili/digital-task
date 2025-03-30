@@ -1,1 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
 
+body .App {
+  width: 100vw;
+  height: 100vh;
+  background-color: "#ffffff";
+}
+
+/* logo container styles */
+
+.header {
+  width: 100%;
+  border-bottom: solid 1px #e9e9e9;
+}
+
+.header-container {
+  padding: 29px 0 25.5px 0;
+  margin: auto;
+  width: 61%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  margin: 0 23px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #000000;
+  transition: color ease 500ms;
+}
+.menu:hover {
+  color: #eb0028;
+}
+
+.menu > img {
+  margin-left: 5px;
+}

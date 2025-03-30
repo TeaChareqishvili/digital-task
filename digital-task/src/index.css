@@ -8,7 +8,6 @@
 body .App {
   width: 100vw;
   height: 100vh;
-  background-color: "#ffffff";
 }
 
 /* logo container styles */
@@ -46,4 +45,12 @@ body .App {
 
 .menu > img {
   margin-left: 5px;
+}
+
+/* post page styles */
+
+.post-container {
+  width: 61%;
+  padding: 48px, 0;
+  margin: auto;
 }

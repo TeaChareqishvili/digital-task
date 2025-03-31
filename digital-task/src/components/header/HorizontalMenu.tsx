@@ -1,6 +1,5 @@
-import menu from "../../data";
-import arrowRight from "../../assets/arrowRight.png";
 import { useEffect, useState, useCallback } from "react";
+import Navigation from "./Navigation";
 
 export default function HorizontalMenu() {
   const [lastScrollTop, setLastScrollTop] = useState(0);
@@ -27,23 +26,7 @@ export default function HorizontalMenu() {
 
   return (
     <div className={`navigation ${visible ? "" : "hide-menu"}`}>
-      <ul className="menu-bar">
-        {menu.map((item) => (
-          <li key={item.id} className="menu">
-            {item.text}
-            {item.icon && <img src={item.icon} alt="icon" />}
-            {item.dropdown && (
-              <ul className="dropdown">
-                {item.dropdown.map((subitem) => (
-                  <li key={subitem.id}>
-                    {subitem.text} <img src={arrowRight} alt="icon" />
-                  </li>
-                ))}
-              </ul>
-            )}
-          </li>
-        ))}
-      </ul>
+      <Navigation flexDirection="row" alignItems="center" />
     </div>
   );
 }

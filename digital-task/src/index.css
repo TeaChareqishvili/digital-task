@@ -216,8 +216,8 @@ body .App {
 /* post page styles */
 
 .post-container {
-  width: 90%;
-  padding: 3rem 0 10rem 0;
+  width: 100%;
+  padding: 0rem 1.25rem 0rem 1.25rem;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -225,12 +225,13 @@ body .App {
   justify-content: center;
 }
 .post-card-wrapper {
-  width: 100%;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   gap: 48px;
+  margin-bottom: 4rem;
 }
 .card {
   display: flex;
@@ -410,9 +411,7 @@ body .App {
   }
 
   .post-card-wrapper {
-    width: 100%;
     gap: 38px;
-    margin-bottom: 2rem;
   }
 
   .search-container {

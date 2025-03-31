@@ -6,8 +6,6 @@ import Search from "../search/Search";
 export default function PostWrapper() {
   const { filteredData, setSearchTerm } = useFetchPost();
 
-  console.log(filteredData, "filter");
-
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
   };

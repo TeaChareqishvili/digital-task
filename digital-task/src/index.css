@@ -47,6 +47,56 @@ body .App {
   justify-content: center;
 }
 
+.dropdown {
+  display: none;
+  padding: 20px;
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  width: 175px;
+}
+
+.dropdown li {
+  padding: 0.5rem 0;
+  font-size: 0.813rem;
+  color: #000000;
+  font-family: "Roboto-400";
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all ease 500ms;
+  position: relative;
+}
+
+.border {
+  height: 1px;
+  width: 100%;
+}
+
+.dropdown li:hover {
+  color: #969696;
+  margin-left: 0.5rem;
+}
+
+.dropdown li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #e9e9e9;
+}
+
+.menu img.arrow {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
 .menu {
   margin: 0 23px;
   cursor: pointer;
@@ -56,6 +106,8 @@ body .App {
   transition: color ease 500ms;
   display: flex;
   align-items: center;
+  position: relative;
+  padding: 10px;
 }
 .menu:hover {
   color: #eb0028;
@@ -65,6 +117,10 @@ body .App {
   margin-left: 5px;
   width: 0.5rem;
   height: 0.25rem;
+}
+
+.menu:hover .dropdown {
+  display: block;
 }
 
 /* post page styles */

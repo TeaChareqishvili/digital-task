@@ -74,6 +74,10 @@ body .App {
   width: 80%;
   padding: 3rem 0 10rem 0;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .post-card-wrapper {
   width: 100%;
@@ -149,6 +153,37 @@ body .App {
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-family: "Roboto-400";
+}
+
+/* search styles */
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem;
+}
+
+.search-input {
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border: 2px solid #938f90;
+  border-radius: 1rem 0 0 1rem;
+  border-right: none;
+  outline: none;
+}
+
+.search-button {
+  padding: 1rem;
+  background: #f8f8f8;
+  border: 2px solid #938f90;
+  border-radius: 0 1rem 1rem 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.search-button img {
+  width: 20px;
+  height: 20px;
 }
 
 /* modal styles */

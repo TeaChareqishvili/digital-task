@@ -26,7 +26,9 @@ export default function HorizontalMenu() {
 
   return (
     <div className={`navigation ${visible ? "" : "hide-menu"}`}>
-      <Navigation flexDirection="row" alignItems="center" />
+      <div className="desktop-navigation">
+        <Navigation flexDirection="row" alignItems="center" />
+      </div>
     </div>
   );
 }

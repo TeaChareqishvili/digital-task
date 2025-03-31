@@ -1,6 +1,6 @@
-import logo from "../../assets/Logotype.png";
-import close from "../../assets/close.png";
-import Navigation from "./Navigation";
+import logo from "../../../assets/Logotype.png";
+import close from "../../../assets/close.png";
+import Navigation from "../Navigation";
 
 type burgerMenuProp = {
   isMenuOpen: boolean;

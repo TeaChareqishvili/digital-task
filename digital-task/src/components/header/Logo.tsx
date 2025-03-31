@@ -1,5 +1,5 @@
 import logo from "../../assets/Logotype.png";
-import BurgerMenuContainer from "./BurgerMenuContainer";
+import BurgerMenuContainer from "./burger/BurgerMenuContainer";
 
 export default function Logo() {
   return (

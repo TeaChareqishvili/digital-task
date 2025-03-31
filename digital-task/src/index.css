@@ -216,7 +216,7 @@ body .App {
 /* post page styles */
 
 .post-container {
-  width: 80%;
+  width: 90%;
   padding: 3rem 0 10rem 0;
   margin: auto;
   display: flex;
@@ -237,7 +237,7 @@ body .App {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  /* max-width: 360px; */
+  max-width: 22.5rem;
   cursor: pointer;
   transition: all ease-in 500ms;
   padding: 0.313rem;
@@ -255,7 +255,6 @@ body .App {
 }
 
 .post-title {
-  font-size: 1.5rem;
   color: #000000;
   line-height: 1.875rem;
   margin-bottom: 1rem;
@@ -306,6 +305,7 @@ body .App {
   display: flex;
   justify-content: center;
   padding: 1.25rem;
+  width: 100%;
 }
 
 .search-input {
@@ -315,6 +315,7 @@ body .App {
   border-radius: 1rem 0 0 1rem;
   border-right: none;
   outline: none;
+  width: 50%;
 }
 
 .search-button {
@@ -363,6 +364,7 @@ body .App {
   color: #ffffff;
   cursor: pointer;
   font-size: 1rem;
+  font-family: "open-sans-bold";
 
   transition: all ease-in 500ms;
 }
@@ -400,5 +402,20 @@ body .App {
 
   .navigation {
     border-bottom: none;
+    display: none;
+  }
+
+  .post-container {
+    width: 100%;
+  }
+
+  .post-card-wrapper {
+    width: 100%;
+    gap: 38px;
+    margin-bottom: 2rem;
+  }
+
+  .search-container {
+    padding: 0rem 0rem 1.25rem 0;
   }
 }

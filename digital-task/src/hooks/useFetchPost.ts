@@ -14,7 +14,7 @@ export type Post = {
 };
 
 const useFetchPost = () => {
-  const [data, setData] = useState<Post[] | null>(null);
+  const [data, setData] = useState<Post[] | null>([]);
   const [error, setError] = useState<unknown>(null);
   const [searchTerm, setSearchTerm] = useState("");
 

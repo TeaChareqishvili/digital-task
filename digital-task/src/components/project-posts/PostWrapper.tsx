@@ -24,8 +24,8 @@ export default function PostWrapper() {
     <div className="post-container">
       <Search onSearch={handleSearchChange} />
       <div className="post-card-wrapper">
-        {filteredData?.map((item) => (
-          <PostCard key={item.id} post={item} onClick={openModal} />
+        {filteredData?.map((item, index) => (
+          <PostCard key={index} post={item} onClick={() => openModal(item)} />
         ))}
       </div>
       {selectedPost && (

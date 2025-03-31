@@ -8,7 +8,6 @@ export default function HorizontalMenu() {
   const handleScroll = useCallback(() => {
     const currentScrollPos = window.scrollY;
     const isScrollingDown = currentScrollPos > lastScrollTop;
-    console.log(currentScrollPos, "scrol");
 
     if (isScrollingDown && currentScrollPos > 200) {
       setVisible(false);

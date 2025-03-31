@@ -5,7 +5,7 @@ interface PostCardProps {
   onClick: (post: Post) => void;
 }
 
-const PostCard = ({ post, onClick }: PostCardProps) => {
+export default function PostCard({ post, onClick }: PostCardProps) {
   return (
     <div className="card" onClick={() => onClick(post)}>
       <img
@@ -25,6 +25,4 @@ const PostCard = ({ post, onClick }: PostCardProps) => {
       <p className="post-text">{post.text}</p>
     </div>
   );
-};
-
-export default PostCard;
+}

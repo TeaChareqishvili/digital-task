@@ -1,5 +1,5 @@
 import { useState } from "react";
-import burger from "../../assets/burger.png";
+import burger from "../../../assets/burger.png";
 import BurgerMenu from "./BurgerMenu";
 
 export default function BurgerMenuContainer() {

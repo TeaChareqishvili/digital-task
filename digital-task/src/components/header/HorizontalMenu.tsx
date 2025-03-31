@@ -1,19 +1,34 @@
-import menu from "../../data";
-import HeaderLayout from "./HeaderLayout";
+import { useEffect, useState, useCallback } from "react";
+import Navigation from "./Navigation";
 
 export default function HorizontalMenu() {
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  const handleScroll = useCallback(() => {
+    const currentScrollPos = window.scrollY;
+    const isScrollingDown = currentScrollPos > lastScrollTop;
+    console.log(currentScrollPos, "scrol");
+
+    if (isScrollingDown && currentScrollPos > 200) {
+      setVisible(false);
+    } else {
+      setVisible(true);
+    }
+
+    setLastScrollTop(currentScrollPos);
+  }, [lastScrollTop]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
+
   return (
-    <div className="header">
-      <HeaderLayout>
-        <ul className="menu-bar">
-          {menu.map((item) => (
-            <li key={item.id} className="menu">
-              {item.text}
-              {item.icon && <img src={item.icon} alt="icon" />}
-            </li>
-          ))}
-        </ul>
-      </HeaderLayout>
+    <div className={`navigation ${visible ? "" : "hide-menu"}`}>
+      <div className="desktop-navigation">
+        <Navigation flexDirection="row" alignItems="center" />
+      </div>
     </div>
   );
 }

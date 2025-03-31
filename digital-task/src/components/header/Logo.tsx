@@ -1,13 +1,11 @@
 import logo from "../../assets/Logotype.png";
-
-import HeaderLayout from "./HeaderLayout";
+import BurgerMenuContainer from "./BurgerMenuContainer";
 
 export default function Logo() {
   return (
-    <div className="header">
-      <HeaderLayout>
-        <img src={logo} alt="logo" />
-      </HeaderLayout>
+    <div className="logo">
+      <BurgerMenuContainer />
+      <img src={logo} alt="logo" />
     </div>
   );
 }

@@ -15,8 +15,8 @@ export type Post = {
 
 const useFetchPost = () => {
   const [data, setData] = useState<Post[] | null>(null);
-
   const [error, setError] = useState<unknown>(null);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,7 +33,13 @@ const useFetchPost = () => {
     fetchData();
   }, []);
 
-  return { data, error };
+  const filteredData = data?.filter(
+    (post) =>
+      post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      post.text.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  return { filteredData, error, setSearchTerm };
 };
 
 export default useFetchPost;

@@ -1,4 +1,3 @@
-import React from "react";
 import { Post } from "../../hooks/useFetchPost";
 
 interface PostCardProps {

@@ -1,4 +1,3 @@
-import React from "react";
 import menu from "../../data";
 import HeaderLayout from "./HeaderLayout";
 
